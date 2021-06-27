@@ -11,4 +11,11 @@
         <appender-ref ref="file" />
     </logger>
 
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>%fullRequest%n%n%fullResponse</pattern>
+        </encoder>
+    </appender>
+
+    <appender-ref ref="STDOUT" />
 </configuration>
